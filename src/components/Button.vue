@@ -27,6 +27,7 @@
        background-color: #FF662D;
        color: #fff;
        cursor: pointer;
+       font-family: Rubik;
 
        &--outlined{
            background: none;

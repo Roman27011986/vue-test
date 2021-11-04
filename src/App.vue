@@ -1,22 +1,21 @@
 <template>
 <div id='app'>
-  <Btn>Roma</Btn>
-  <StarRating :rating="2.5"/>
+  <ApartmentItem/>
 </div>
 </template>
 
 <script>
-import StarRating from './components/StarRating.vue'
-import Btn from './components/Button.vue'
+  import ApartmentItem from './components/apartment/ApartmentItem.vue'
   export default {
     name:'App',
     components:{
-      Btn,
-      StarRating
+      ApartmentItem
     }
   }
 </script>
 
 <style lang="scss" scoped>
-
+   #app {
+     font-family: Rubik;
+   }
 </style>
