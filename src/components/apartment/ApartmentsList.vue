@@ -7,6 +7,7 @@
        :rating="rating"
        :imgSrc="imgUrl"
        :price="price"
+       class="apartments-list__item"
       />
     </div>
 </template>
