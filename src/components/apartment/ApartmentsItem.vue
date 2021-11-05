@@ -20,7 +20,7 @@
 <script>
     import StarRating from '../StarRating.vue'
     export default {
-        name:'ApartmentItem',
+        name:'ApartmentsItem',
         components:{
            StarRating 
         },
@@ -62,6 +62,7 @@
            transition: opacity 0.4s;
            background: rgba(#0f1d2d, 0.7);
            min-height: 200px;
+           line-height: 1.4;
            color:#fff;
            text-align: left;
            cursor: pointer;
