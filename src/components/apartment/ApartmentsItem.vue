@@ -5,7 +5,7 @@
           <div class="apartments-item__content">
               <p class="apartments-item__description">
               {{descr}}
-          </p>
+              </p>
           <div class="apartments-item__rating">
               <StarRating :rating="rating" />
           </div>
@@ -48,8 +48,9 @@
 <style lang="scss" scoped>
    .apartments-item {
        position: relative;
-       max-width: 350px;
+       width: 350px;
        padding: 0 20px;
+       margin-bottom: 30px;
 
        &__inner{
            position: relative;
@@ -75,6 +76,8 @@
 
        &__description{
            margin-bottom: 20px;
+           max-height: calc(1em * 1.4 * 3);
+           overflow: hidden;
        }
        &__rating{
            margin-bottom: 20px;

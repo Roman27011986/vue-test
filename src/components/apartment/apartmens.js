@@ -2,8 +2,8 @@ export default [
     {
           id:'qkjmkvnowqeqwejqe123ijdij',
           title: 'Prada',
-          imgUrl:'./img/apartmets/ap1.jpg',
-          descr:'Devils qqqqqqqqqqqqqqqqqqqqqqqqq',
+          imgUrl:'/img/apartments/ap1.jpg',
+          descr:'Devils qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq',
           price:20001,
           rating:3.5,
           location:{
@@ -18,8 +18,8 @@ export default [
     {
           id:'qkjmkqeqwejqe123ijdij',
           title: 'Tosha',
-          imgUrl:'./img/apartmets/ap2.jpg',
-          descr:'Devils qqqqqqqqqqqqqqqqqqqqqqqqq',
+          imgUrl:'/img/apartments/ap2.jpg',
+          descr:'Devils ',
           price:20001,
           rating:2.5,
           location:{
@@ -34,7 +34,7 @@ export default [
     {
           id:'qkkqeqwejqe123ijdij',
           title: 'Olya',
-          imgUrl:'./img/apartmets/ap3.jpg',
+          imgUrl:'/img/apartments/ap3.jpg',
           descr:'Devils qqqqqqqqqqqqqqqqqqqqqqqqq',
           price:20001,
           rating:2.5,
@@ -50,7 +50,7 @@ export default [
     {
           id:'qkkqeqweqe123ijdij',
           title: 'Papa',
-          imgUrl:'./img/apartmets/ap4.jpg',
+          imgUrl:'/img/apartments/ap6.jpg',
           descr:'Devils qqqqqqqqqqqqqqqqqqqqqqqqq',
           price:20001,
           rating:2.5,
@@ -66,8 +66,8 @@ export default [
     {
           id:'qkkeqwejqe123ijdij',
           title: 'Mama',
-          imgUrl:'./img/apartmets/ap5.jpg',
-          descr:'Devils qqqqqqqqqqqqqqqqqqqqqqqqq',
+          imgUrl:'/img/apartments/ap2.jpg',
+          descr:'Mama ',
           price:20001,
           rating:2.5,
           location:{
