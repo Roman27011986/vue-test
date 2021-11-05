@@ -78,6 +78,9 @@
            margin-bottom: 20px;
            max-height: calc(1em * 1.4 * 3);
            overflow: hidden;
+        //    display: -webkit-box;
+        //    -webkit-line-clamp: 3;
+        //    -webkit-box-orient: vertical;
        }
        &__rating{
            margin-bottom: 20px;
