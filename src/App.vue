@@ -1,6 +1,7 @@
 <template>
 <div id='app'>
   <ApartmentsList :items="apartments">
+    <template v-slot:title>title</template>
   <template v-slot:apartment="{apartment}">
     <ApartmentsItem 
        :key="apartment.id"
