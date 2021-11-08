@@ -1,35 +1,33 @@
 <template>
 <div id='app'>
-  <ApartmentsList :items="apartments"/>
+  <ApartmentsList :items="apartments">
+  <template v-slot:apartment="{apartment}">
+    <ApartmentsItem 
+       :key="apartment.id"
+       :descr="apartment.descr"
+       :rating="apartment.rating"
+       :imgSrc="apartment.imgUrl"
+       :price="apartment.price"
+       class="apartments-list__item"
+      /> 
+  </template>
+  </ApartmentsList>
 </div>
 </template>
 
 <script>
+  import ApartmentsItem from './components/apartment/ApartmentsItem.vue'
   import ApartmentsList from './components/apartment/ApartmentsList.vue'
   import apartments from './components/apartment/apartmens'
   export default {
     name:'App',
     components:{
-      ApartmentsList
+      ApartmentsList,
+      ApartmentsItem
     },
     data(){
       return{
         apartments,
-        // apartment:{
-        //   id:'qkjmkvnowqeqwejqe123ijdij',
-        //   title:'Prada',
-        //   descr:'Devils qqqqqqqqqqqqqqqqqqqqqqqqq',
-        //   price:20001,
-        //   rating:3.5,
-        //   location:{
-        //     city:'Mariupol',
-        //   },
-        //   owner:{
-        //     name:'Roman',
-        //     phone:'097-052-11-80',
-        //     email:'didorsn@gmail.com',
-        //   },
-        // }
       }
     }
   }
