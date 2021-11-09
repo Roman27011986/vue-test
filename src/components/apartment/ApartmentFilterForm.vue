@@ -5,8 +5,8 @@
      v-model="city"
      />
      <CustomInput
-     v-model="price"
      placeholder="Цена, от"
+     v-model="price"
      />
      <SubmitBtn type="submit">SubmitBtn</SubmitBtn>
     </form>
@@ -35,7 +35,10 @@
         },
         methods:{
             handleSubmit(){
-                this.$emit('submit', 'form')
+                this.$emit('submit', {
+                    city:this.city,
+                    price:this.price
+                    })
             }
         }
     }

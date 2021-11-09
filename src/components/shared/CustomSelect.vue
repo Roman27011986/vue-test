@@ -24,7 +24,7 @@
             listeners(){
                 return{
                     ...this.listeners,
-                    input: event => this.$emit('input', event.terget.value)
+                    input: event => this.$emit('input', console.log(event))
                 }
             },
             formatedItems(){

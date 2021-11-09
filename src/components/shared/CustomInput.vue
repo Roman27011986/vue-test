@@ -6,10 +6,10 @@
     export default {
         name:"CustomInput",
         computed:{
-            listeners(){
-                return{
+            listeners() {
+                return {
                     ...this.listeners,
-                    input: event => this.$emit('input', event.terget.value)
+                    input: event => this.$emit('input', event.target.value)
                 }
             }
         }
@@ -25,5 +25,8 @@
        outline: none;
        line-height: inherit;
        padding: 8px 15px;
+       &::placeholder{
+           color: inherit;
+       }
    }
 </style>
