@@ -1,7 +1,12 @@
 <template>
 <div id='app'>
+  <Container>
+  <ApartmentFilterForm 
+  class="form"
+  @submit="logger"
+  />
+  </Container>
   <ApartmentsList :items="apartments">
-    <template v-slot:title>title</template>
   <template v-slot:apartment="{apartment}">
     <ApartmentsItem 
        :key="apartment.id"
@@ -20,15 +25,26 @@
   import ApartmentsItem from './components/apartment/ApartmentsItem.vue'
   import ApartmentsList from './components/apartment/ApartmentsList.vue'
   import apartments from './components/apartment/apartmens'
+  import ApartmentFilterForm from './components/apartment/ApartmentFilterForm.vue'
+  import Container from './components/shared/container.vue'
+  
   export default {
     name:'App',
     components:{
       ApartmentsList,
-      ApartmentsItem
+      ApartmentsItem,
+      ApartmentFilterForm,
+      Container
     },
     data(){
       return{
         apartments,
+
+      }
+    },
+    methods:{
+      logger(v){
+        console.log(v);
       }
     }
   }
@@ -38,4 +54,7 @@
    #app {
      font-family: Rubik;
    }
+   .form{
+     display: flex;
+ }
 </style>
