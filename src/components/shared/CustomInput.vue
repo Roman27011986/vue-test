@@ -8,7 +8,7 @@
         computed:{
             listeners() {
                 return {
-                    ...this.listeners,
+                    ...this.$listeners,
                     input: event => this.$emit('input', event.target.value)
                 }
             }

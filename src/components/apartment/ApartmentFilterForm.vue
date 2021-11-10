@@ -2,7 +2,7 @@
     <form  @submit.prevent="handleSubmit">
      <CustomSelect 
      :items="cities"
-     v-model="city"
+      v-model="city"
      />
      <CustomInput
      placeholder="Цена, от"
