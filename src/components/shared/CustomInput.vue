@@ -1,18 +1,15 @@
 <template>
-  <input v-on="listeners" class="custom-input">
+  <input v-model="price" type="number" class="custom-input">
 </template>
 
 <script>
     export default {
         name:"CustomInput",
-        computed:{
-            listeners() {
-                return {
-                    ...this.$listeners,
-                    input: event => this.$emit('input', event.target.value)
-                }
+        data(){
+            return {
+                price:0
             }
-        }
+        },
     }
 </script>
 

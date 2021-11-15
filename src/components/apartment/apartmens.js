@@ -4,10 +4,10 @@ export default [
           title: 'Prada',
           imgUrl:'/img/apartments/ap1.jpg',
           descr:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing',
-          price:20001,
+          price:1000,
           rating:3.5,
           location:{
-            city:'Mariupol',
+            city:'qweqe',
           },
           owner:{
             name:'Roman',
@@ -20,10 +20,10 @@ export default [
           title: 'Tosha',
           imgUrl:'/img/apartments/ap2.jpg',
           descr:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing',
-          price:20001,
+          price:2000,
           rating:2.5,
           location:{
-            city:'Mariupol',
+            city:'qweqe',
           },
           owner:{
             name:'Tosha',
@@ -36,10 +36,10 @@ export default [
           title: 'Olya',
           imgUrl:'/img/apartments/ap3.jpg',
           descr:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing',
-          price:20001,
+          price:2000,
           rating:2.5,
           location:{
-            city:'Mariupol',
+            city:'qweqe',
           },
           owner:{
             name:'Olya',
@@ -52,7 +52,7 @@ export default [
           title: 'Papa',
           imgUrl:'/img/apartments/ap6.jpg',
           descr:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing',
-          price:20001,
+          price:3000,
           rating:2.5,
           location:{
             city:'Mariupol',
@@ -68,10 +68,10 @@ export default [
           title: 'Mama',
           imgUrl:'/img/apartments/ap2.jpg',
           descr:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing',
-          price:20001,
+          price:1000,
           rating:2.5,
           location:{
-            city:'Mariupol',
+            city:'qweqe',
           },
           owner:{
             name:'Mama',

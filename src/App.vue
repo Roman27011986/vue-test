@@ -2,11 +2,11 @@
 <div id='app'>
   <Container>
   <ApartmentFilterForm 
-  class="form"
-  @submit="logger"
+      class="form"
+      @submit="filter"
   />
   </Container>
-  <ApartmentsList :items="apartments">
+  <ApartmentsList :items="filteredApartments">
   <template v-slot:apartment="{apartment}">
     <ApartmentsItem 
        :key="apartment.id"
@@ -27,6 +27,7 @@
   import apartments from './components/apartment/apartmens'
   import ApartmentFilterForm from './components/apartment/ApartmentFilterForm.vue'
   import Container from './components/shared/container.vue'
+  import CustomInput from './components/shared/CustomInput.vue'
   
   export default {
     name:'App',
@@ -34,18 +35,49 @@
       ApartmentsList,
       ApartmentsItem,
       ApartmentFilterForm,
-      Container
+      Container,
+      CustomInput
     },
-    data(){
-      return{
+    data() {
+      return { 
         apartments,
-
+        filters:{
+          city:'',
+          price:0
+        }
       }
     },
-    methods:{
-      logger(v){
-        console.log(v);
+    computed:{
+      filteredApartments(){
+        // const reqObject = JSON.parse(JSON.stringify(this.apartments));
+        return this.filterByCityName(this.filterByPrice(this.apartments))
       }
+    },
+
+    methods:{
+      filter({city,price}){
+        if (price || city) {
+          this.filters.city = city
+          this.filters.price = price
+        }
+      },
+
+      filterByCityName(apartments){
+        if (!this.filters.city) return apartments
+        
+        return apartments.filter(apartment=>{
+          return apartment.location.city === this.filters.city
+        })
+      },
+
+      filterByPrice(apartments){
+        if (!this.filters.price) return apartments
+
+        return apartments.filter(apartment=>{
+          return apartment.price >= this.filters.price
+        })
+      },
+
     }
   }
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <select v-on="listeners" class="custom-select">
+    <select v-model="selected" class="custom-select">
         <option 
           v-for="item in formatedItems"
           :key="item.value"
@@ -20,13 +20,13 @@
               required:true
           }
        },
-        computed:{
-            listeners(){
-                return{
-                    ...this.$listeners,
-                    input: event => this.$emit('input', console.log(event))
+       data(){
+                return {
+                    selected:''
                 }
             },
+        computed:{
+            
             formatedItems(){
                 return this.items.map(item =>{
                     if(typeof item === 'object'){

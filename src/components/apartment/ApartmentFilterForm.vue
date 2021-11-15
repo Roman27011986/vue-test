@@ -24,7 +24,7 @@
         },
         data(){
             return{
-                price:0,
+                price:0 ,
                 city:''
             }
         },
