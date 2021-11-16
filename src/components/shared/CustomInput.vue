@@ -7,7 +7,7 @@
         name:"CustomInput",
         data(){
             return {
-                price:0
+                price:''
             }
         },
     }
