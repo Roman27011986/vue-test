@@ -23,5 +23,9 @@ export default {
   padding: 20px;
   background: #e1efff;
   font-weight: 400;
+  margin-bottom: 20px;
+  &__title {
+    font-weight: 600;
+  }
 }
 </style>

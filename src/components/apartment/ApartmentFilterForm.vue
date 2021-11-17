@@ -29,7 +29,7 @@ export default {
         "Mariupol",
         "Kiev",
         "Kharkiv",
-        "Вonetsk",
+        "Donetsk",
         "Odessa",
       ];
     },
