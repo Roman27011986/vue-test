@@ -21,9 +21,9 @@
 <script>
 import ApartmentsItem from "../components/apartment/ApartmentsItem.vue";
 import ApartmentsList from "../components/apartment/ApartmentsList.vue";
-import apartments from "../components/apartment/apartmens";
 import ApartmentFilterForm from "../components/apartment/ApartmentFilterForm.vue";
 import Container from "../components/shared/Container.vue";
+import { getApartmentsList } from "../services/apartments.service";
 
 export default {
   name: "App",
@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      apartments,
+      apartments: [],
       filters: {
         city: "",
         price: 0,
@@ -47,6 +47,15 @@ export default {
       // const reqObject = JSON.parse(JSON.stringify(this.apartments));
       return this.filterByCityName(this.filterByPrice(this.apartments));
     },
+  },
+
+  async created() {
+    try {
+      const { data } = await getApartmentsList();
+      this.apartments = data;
+    } catch (error) {
+      console.log(error);
+    }
   },
 
   methods: {

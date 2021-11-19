@@ -92,6 +92,7 @@ export default {
     width: 100%;
     padding: 12px;
     font-family: inherit;
+    background-color: #e1efff;
   }
   &__title {
     font-size: 25px;
