@@ -6,21 +6,41 @@
     </div>
     <img :src="apartment.imgUrl" alt="" class="apartment-main-info__photo" />
     <p class="apartment-main-info__description">{{ apartment.descr }}</p>
+    <Btn class="apartment-main-info__btn" @click="handleApartmentsBooking"
+      >Забронировать</Btn
+    >
   </article>
 </template>
 
 <script>
 import Rating from "../StarRating.vue";
+import Btn from "../shared/Button.vue";
+import { bookApartment } from "../../services/orders.service";
 
 export default {
   name: "ApartmentsMainInfo",
   components: {
     Rating,
+    Btn,
   },
   props: {
     apartment: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    async handleApartmentsBooking() {
+      const body = {
+        apartmentId: this.$route.params.id,
+        date: Date.now(),
+      };
+
+      try {
+        await bookApartment(body);
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
 };
@@ -44,6 +64,10 @@ export default {
   &__description {
     line-height: 1.3;
     margin-top: 30px;
+  }
+
+  &__btn {
+    margin-top: 20px;
   }
 }
 </style>

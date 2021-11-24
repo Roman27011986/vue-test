@@ -3,7 +3,6 @@
     <input
       v-bind="$attrs"
       v-model="price"
-      type="number"
       class="custom-input"
       :class="!isValid && 'custom-input--error'"
     />
@@ -22,7 +21,11 @@ export default {
       error: "",
     };
   },
-  inject: ["form"],
+  inject: {
+    form: {
+      default: null,
+    },
+  },
 
   props: {
     // value: {
@@ -58,6 +61,10 @@ export default {
         }
         return hasPassed;
       });
+    },
+
+    reset() {
+      this.$$emit("input", "");
     },
   },
 

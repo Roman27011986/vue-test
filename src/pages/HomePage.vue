@@ -1,21 +1,23 @@
 <template>
-  <Container>
-    <ApartmentFilterForm class="form" @submit="filter" />
-    <h2 class="title">Подборка согласно выбора</h2>
-    <ApartmentsList :items="filteredApartments">
-      <template v-slot:apartment="{ apartment }">
-        <ApartmentsItem
-          :key="apartment.id"
-          :id="apartment.id"
-          :descr="apartment.descr"
-          :rating="apartment.rating"
-          :imgSrc="apartment.imgUrl"
-          :price="apartment.price"
-          class="apartments-list__item"
-        />
-      </template>
-    </ApartmentsList>
-  </Container>
+  <SectionWithHeaderSpacer>
+    <Container>
+      <ApartmentFilterForm class="form" @submit="filter" />
+      <h2 class="title">Подборка согласно выбора</h2>
+      <ApartmentsList :items="filteredApartments">
+        <template v-slot:apartment="{ apartment }">
+          <ApartmentsItem
+            :key="apartment.id"
+            :id="apartment.id"
+            :descr="apartment.descr"
+            :rating="apartment.rating"
+            :imgSrc="apartment.imgUrl"
+            :price="apartment.price"
+            class="apartments-list__item"
+          />
+        </template>
+      </ApartmentsList>
+    </Container>
+  </SectionWithHeaderSpacer>
 </template>
 
 <script>
@@ -23,6 +25,7 @@ import ApartmentsItem from "../components/apartment/ApartmentsItem.vue";
 import ApartmentsList from "../components/apartment/ApartmentsList.vue";
 import ApartmentFilterForm from "../components/apartment/ApartmentFilterForm.vue";
 import Container from "../components/shared/Container.vue";
+import SectionWithHeaderSpacer from "../components/shared/SectionWithHeaderSpacer.vue";
 import { getApartmentsList } from "../services/apartments.service";
 
 export default {
@@ -32,6 +35,7 @@ export default {
     ApartmentsItem,
     ApartmentFilterForm,
     Container,
+    SectionWithHeaderSpacer,
   },
   data() {
     return {

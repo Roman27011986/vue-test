@@ -4,14 +4,18 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy -p"
   },
   "dependencies": {
     "axios": "^0.24.0",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
+    "vue-notification": "^1.3.20",
     "vue-router": "^4.0.12",
-    "vuex": "^4.0.0-0"
+    "vuex": "^4.0.2",
+    "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

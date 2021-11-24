@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- <notifications /> -->
     <div class="content">
       <AppHeader />
       <router-view></router-view>
@@ -8,7 +9,7 @@
   </div>
 </template>
 <script>
-import AppHeader from "./components/Header.vue";
+import AppHeader from "./components/header/index.vue";
 import AppFooter from "./components/Footer.vue";
 
 export default {
@@ -16,6 +17,17 @@ export default {
   components: {
     AppHeader,
     AppFooter,
+  },
+  // mounted() {
+  //   console.log(this.$store.state.userName);
+  // },
+  mounted() {
+    // this.$notify({
+    //   group: "foo",
+    //   title: "Important message",
+    //   text: "Hello user! This is a notification!",
+    // });
+    console.log(this.$store.getters["auth/isLoggedIn"]);
   },
 };
 </script>
@@ -30,7 +42,6 @@ export default {
 
 .content {
   flex-grow: 1;
-  padding-top: 120px;
 }
 
 .title {
